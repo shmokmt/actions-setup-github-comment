@@ -16,16 +16,16 @@ This action can run be on `ubuntu-latest` and `macos-latest`.
 
 Use latest version
 
-```
+```yaml
 steps:
-- uses: shmokmt/actions-setup-github-comment@v1
+  - uses: shmokmt/actions-setup-github-comment@v1
 ```
 
 Use specific version
 
-```
+```yaml
 steps:
-- uses: shmokmt/actions-setup-github-comment@v1
-  with:
-    version: v4.0.1
+  - uses: shmokmt/actions-setup-github-comment@v1
+    with:
+      version: v4.0.1
 ```
