@@ -1,0 +1,21 @@
+name: "setup-github-comment"
+description: "Setup suzuki-shunsuke/github-comment"
+author: "shmokmt"
+inputs:
+  version:
+    description: "A version to install github-comment"
+    default: "latest"
+runs:
+  using: "composite"
+  steps:
+    - run: curl -sfL https://raw.githubusercontent.com/shmokmt/actions-setup-github-comment/main/install.sh | sudo sh -s  -- -b /usr/local/bin -d ${GITHUB_COMMENT_VERSION}
+      shell: bash
+      env:
+        GITHUB_COMMENT_VERSION: ${{ inputs.version }}
+    - run: github-comment --version
+      shell: bash
+
+# Ref: https://haya14busa.github.io/github-action-brandings/
+branding:
+  icon: 'terminal'
+  color: 'gray-dark'
