@@ -1,0 +1,39 @@
+name: Setup test
+on:
+  pull_request:
+  push:
+    branches:
+      - "main"
+jobs:
+  test-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2 
+      
+      - run: sleep 5
+      
+      - name: use the action
+        uses: ./
+        with:
+          version: "latest"
+
+      - name: show outputs
+        run: |
+          github-comment --version
+  test-darwin:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2 
+
+      - run: sleep 5
+      
+      - name: use the action
+        uses: ./
+        with:
+          version: "latest"
+
+      - name: show outputs
+        run: |
+          github-comment --version
