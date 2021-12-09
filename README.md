@@ -1,4 +1,4 @@
-# actions-setup-tfcmt
+# actions-setup-github-comment
 
 [![Setup test](https://github.com/shmokmt/actions-setup-github-comment/actions/workflows/test.yml/badge.svg)](https://github.com/shmokmt/actions-setup-github-comment/actions/workflows/test.yml)
 
