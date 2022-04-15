@@ -8,7 +8,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: curl -sfL https://raw.githubusercontent.com/shmokmt/actions-setup-github-comment/main/install.sh | sudo sh -s  -- -b /usr/local/bin -d ${GITHUB_COMMENT_VERSION}
+    - run: sudo bash ${{ github.action_path }}/install.sh -b /usr/local/bin -d ${TFCMT_VERSION}
       shell: bash
       env:
         GITHUB_COMMENT_VERSION: ${{ inputs.version }}
