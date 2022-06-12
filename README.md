@@ -18,14 +18,14 @@ Use latest version
 
 ```yaml
 steps:
-  - uses: shmokmt/actions-setup-github-comment@v1
+  - uses: shmokmt/actions-setup-github-comment@v2
 ```
 
 Use specific version
 
 ```yaml
 steps:
-  - uses: shmokmt/actions-setup-github-comment@v1
+  - uses: shmokmt/actions-setup-github-comment@v2
     with:
       version: v4.0.1
 ```
