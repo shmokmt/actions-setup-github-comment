@@ -4,6 +4,10 @@
 
 The shmokmt/actions-setup-github-comment action installs [suzuki-shunsuke/github-comment](https://github.com/suzuki-shunsuke/github-comment) to the `PATH` in your GitHub Actions.
 
+> [!TIP]
+> If you just want to hide tfcmt comments, the tfcmt -patch option is more convenient.
+> ref. https://suzuki-shunsuke.github.io/tfcmt/plan-patch/
+
 ## `Inputs`
 
 ### `version`
