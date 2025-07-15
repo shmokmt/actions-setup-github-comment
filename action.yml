@@ -8,7 +8,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: sudo bash ${{ github.action_path }}/install.sh -b /usr/local/bin -d ${TFCMT_VERSION}
+    - run: sudo bash ${{ github.action_path }}/install.sh -b /usr/local/bin -d ${GITHUB_COMMENT_VERSION}
       shell: bash
       env:
         GITHUB_COMMENT_VERSION: ${{ inputs.version }}
